@@ -10,26 +10,26 @@
     <table>
         <thead>
             <tr>
-                <th>No</th>
+                <th>ID</th>
                 <th>Judul</th>
                 <th>Penulis</th>
                 <th>Penerbit</th>
                 <th>Tahun</th>
                 <th>Stok</th>
-                <th>Kategori</th>
+                <th>ID Kategori</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
             @forelse ($books as $book)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $book['id'] }}</td>
                     <td>{{ $book['judul'] }}</td>
                     <td>{{ $book['penulis'] }}</td>
                     <td>{{ $book['penerbit'] }}</td>
                     <td>{{ $book['tahun_terbit'] }}</td>
                     <td>{{ $book['stok'] }}</td>
-                    <td>{{ $book['kategori'] }}</td>
+                    <td>{{ $book['category_id'] }}</td>
                     <td>
                         <a href="{{ route('books.show', $book['id']) }}">Detail</a>
                         |
@@ -50,5 +50,7 @@
         </tbody>
     </table>
 
-    <p><em>Catatan: data di atas masih data dummy (array statis di Controller), belum dari database. Migration &amp; Model Eloquent baru dibuat di Pertemuan 5.</em></p>
+    {{ $books->links() }}
+
+    <p><em>Catatan: kolom kategori masih menampilkan ID. Menampilkan nama kategori memerlukan Eloquent Relationship, dipelajari di Pertemuan 7.</em></p>
 @endsection

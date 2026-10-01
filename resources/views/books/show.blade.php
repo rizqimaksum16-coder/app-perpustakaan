@@ -33,8 +33,8 @@
             <td>{{ $book['stok'] }}</td>
         </tr>
         <tr>
-            <th class="label-col">Kategori</th>
-            <td>{{ $book['kategori'] }}</td>
+            <th class="label-col">ID Kategori</th>
+            <td>{{ $book['category_id'] }}</td>
         </tr>
     </table>
 @endsection

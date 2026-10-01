@@ -9,11 +9,11 @@
         body { font-family: sans-serif; margin: 0; color: #1f2937; }
 
         /* Navbar */
-        nav { background: #1e3a8a; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        nav .brand { color: #fff; font-weight: bold; font-size: 18px; }
-        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-        nav ul li a { color: #cbd5e1; text-decoration: none; padding: 6px 4px; }
-        nav ul li a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; }
+        .navbar { background: #1e3a8a; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .navbar .brand { color: #fff; font-weight: bold; font-size: 18px; }
+        .navbar ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .navbar ul li a { color: #cbd5e1; text-decoration: none; padding: 6px 4px; }
+        .navbar ul li a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; }
 
         /* Konten */
         main { max-width: 900px; margin: 0 auto; padding: 30px 40px; }
@@ -32,6 +32,12 @@
         .form-box input, .form-box select, .form-box textarea { width: 100%; padding: 6px; margin-top: 4px; }
         .form-box .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
         .form-box .btn { margin-top: 20px; padding: 8px 16px; }
+
+        /* Pagination */
+        .pagination { display: flex; list-style: none; gap: 6px; padding: 0; margin: 16px 0; }
+        .pagination .page-link { display: block; padding: 4px 10px; border: 1px solid #ccc; border-radius: 4px; color: #1f2937; text-decoration: none; }
+        .pagination .active .page-link { background: #2563eb; border-color: #2563eb; color: #fff; }
+        .pagination .disabled .page-link { color: #9ca3af; }
 
         /* Footer */
         footer { text-align: center; padding: 20px; color: #6b7280; font-size: 14px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
