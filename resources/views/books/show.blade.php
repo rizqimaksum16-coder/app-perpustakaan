@@ -1,40 +1,48 @@
-@extends('layouts.app')
-
-@section('title', 'Detail Buku')
-
-@section('content')
-    <p><a href="{{ route('books.index') }}">&larr; Kembali ke daftar</a></p>
-
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Buku</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; max-width: 500px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+        th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+        th { width: 160px; background: #f3f4f6; }
+    </style>
+</head>
+<body>
     <h1>Detail Buku</h1>
+    <p><a href="{{ route('books.index') }}">&larr; Kembali ke daftar buku</a></p>
 
-    <table style="max-width: 500px;">
+    <table>
         <tr>
-            <th class="label-col">Judul</th>
+            <th>Judul</th>
             <td>{{ $book['judul'] }}</td>
         </tr>
         <tr>
-            <th class="label-col">Penulis</th>
+            <th>Penulis</th>
             <td>{{ $book['penulis'] }}</td>
         </tr>
         <tr>
-            <th class="label-col">Penerbit</th>
+            <th>Penerbit</th>
             <td>{{ $book['penerbit'] }}</td>
         </tr>
         <tr>
-            <th class="label-col">Tahun Terbit</th>
+            <th>Tahun Terbit</th>
             <td>{{ $book['tahun_terbit'] }}</td>
         </tr>
         <tr>
-            <th class="label-col">ISBN</th>
+            <th>ISBN</th>
             <td>{{ $book['isbn'] ?? '-' }}</td>
         </tr>
         <tr>
-            <th class="label-col">Stok</th>
+            <th>Stok</th>
             <td>{{ $book['stok'] }}</td>
         </tr>
         <tr>
-            <th class="label-col">ID Kategori</th>
-            <td>{{ $book['category_id'] }}</td>
+            <th>Kategori</th>
+            <td>{{ $book['category']['nama_kategori'] }}</td>
         </tr>
     </table>
-@endsection
+</body>
+</html>
